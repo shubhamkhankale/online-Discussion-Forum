@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta charset="UTF-8">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Technical Discussion Forum</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLE CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />    
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+        <meta charset="UTF-8">
+
+    
+    
+    
+    <style>
+        
+        table {
+    counter-reset: rowNumber;
+    align: center;
+}
+
+table tr {
+    counter-increment: rowNumber;
+
+}
+table td {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+table tr td:first-child::before {
+    content: counter(rowNumber);
+    min-width: 1em;
+   text-align: center;
+    margin-right: 0.5em;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+hr.style-four {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="navbar navbar-inverse navbar-fixed-top" >
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Technical Discussion Forum</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="admin">HOME</a></li>
+                     <li><a href="uinsert">INSERT FIELD</a></li>
+                     <li><a href="block">BLOCK/UNBLOCK USER</a></li>
+                      <li><a href="logout">LOGOUT</a></li>
+                </ul>
+            </div>
+           
+        </div>
+    </div>
+
+        <br><br><br><br><br><br><br>
+    <center>
+        <h1><font face="Droid Serif">Answers</h1>
+        <br><br>
+        <table class="js-serial" align="center" >
+            {{#each data}}
+            <tr>
+                <td>{{answer}} <hr></td>
+                <td>Submitted by - {{user_name}} <hr></td>
+            </tr>
+            {{/each}}
+        </table>
+   
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/trial1.js"></script>
+    <script src="/js/angulars.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</body>
+
+</html>
